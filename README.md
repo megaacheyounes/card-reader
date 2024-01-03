@@ -12,6 +12,10 @@ This is a simple NFC card reader app for Android, crated to emulate a POS machin
 | ----------------------------------------------- | ----------------------------------------------- |
 | <img src="screenshot/main1.jpg" height="500"  > | <img src="screenshot/main2.jpg" height="500"  > |
 
+## Download APK
+
+[card-reader-release.apk](app/release/card-reader-release.apk)
+
 ## Acknowledgments
 
 - [EMV-NFC-Paycard-Enrollement](https://github.com/devnied/EMV-NFC-Paycard-Enrollment)
