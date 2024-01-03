@@ -48,10 +48,11 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
+const val TAG = "MyLog"
+fun log(msg: String) = Log.d(TAG, msg)
 
 class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
 
-    private val TAG = "MyLog"
 
     private lateinit var nfcAdapter: NfcAdapter
 
@@ -120,7 +121,6 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
 
     }
 
-    fun log(msg: String) = Log.d(TAG, msg)
 
 }
 

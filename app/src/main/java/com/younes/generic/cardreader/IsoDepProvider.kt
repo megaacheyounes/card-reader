@@ -9,6 +9,7 @@ import com.github.devnied.emvnfccard.parser.IProvider
 class IsoDepProvider(private val isoDep: IsoDep) : IProvider {
 
     override fun transceive(pCommand: ByteArray?): ByteArray {
+        log("transceive ${pCommand.contentToString()}")
         return isoDep.transceive(pCommand)
     }
 
