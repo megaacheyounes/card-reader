@@ -113,8 +113,8 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
 
         runOnUiThread {
             cardDetailsState = CardDetails(
-                emvCard.cardNumber,
-                emvCard.expireDate.formatAsMonthYear()
+                emvCard.cardNumber ?: "0".repeat(16),
+                (emvCard.expireDate ?: Date(0)).formatAsMonthYear()
             )
         }
 
@@ -142,7 +142,6 @@ fun MainContent(
                 style = MaterialTheme.typography.titleMedium
             )
 
-
             TapCard()
 
             cardDetails?.let {
@@ -164,7 +163,6 @@ fun CardDetails(
             add(5 * 3, " ")
         }.joinToString("")
     }
-
 
     Column(
         modifier = Modifier
@@ -227,8 +225,6 @@ fun CardDetails(
                 style = fontStyle
             )
         }
-
-
     }
 
 }
@@ -262,12 +258,10 @@ fun TapCard() {
             )
         }
 
-
         Text(
             text = "Tap Card",
             style = MaterialTheme.typography.titleLarge
         )
-
 
     }
 }
