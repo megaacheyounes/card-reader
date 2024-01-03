@@ -14,7 +14,7 @@ This is a simple NFC card reader app for Android, crated to emulate a POS machin
 
 ## Download APK
 
-[card-reader-release.apk](app/release/card-reader-release.apk)
+[card-reader-release.apk](https://github.com/megaacheyounes/card-reader/releases/download/v1.0/card-reader-release.apk)
 
 ## Acknowledgments
 
