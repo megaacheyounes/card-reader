@@ -4,6 +4,15 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        getByName("debug") {
+            storeFile =
+                file("../keystore_debug_123456.jks")
+            storePassword = "123456"
+            keyAlias = "debug"
+            keyPassword = "123456"
+        }
+    }
     namespace = "com.younes.generic.cardreader"
     compileSdk = 33
 
@@ -27,6 +36,10 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
+        }
+        getByName("debug") {
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
